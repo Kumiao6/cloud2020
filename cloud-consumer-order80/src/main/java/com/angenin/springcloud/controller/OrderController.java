@@ -3,6 +3,7 @@ package com.angenin.springcloud.controller;
 import com.angenin.springcloud.entities.CommonResult;
 import com.angenin.springcloud.entities.Payment;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,9 +20,12 @@ import javax.annotation.Resource;
 @Slf4j
 public class OrderController {
 
-    public static final String PAYMENT_URL = "http://localhost:8001";
+//        public static final String PAYMENT_URL = "http://localhost:8002";
+    public static final String PAYMENT_URL = "http://CLOUD-PAYMENT-SERVICE";
+
 
     @Resource
+    @LoadBalanced
     private RestTemplate restTemplate;
 
     //因为浏览器只支持get请求，为了方便这里就用get
