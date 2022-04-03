@@ -46,12 +46,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- 引用自己定义的api通用包，可以使用Payment支付Entity -->
-        <dependency>
-            <groupId>com.angenin.springcloud</groupId>
-            <artifactId>cloud-api-commons</artifactId>
-            <version>${project.version}</version>
-        </dependency>
 
 
     </dependencies>

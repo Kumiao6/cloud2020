@@ -5,7 +5,6 @@ import com.angenin.springcloud.entities.Payment;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import sun.jvm.hotspot.gc_implementation.parallelScavenge.PSYoungGen;
@@ -27,7 +26,7 @@ public class OrderController {
 
     //因为浏览器只支持get请求，为了方便这里就用get
     @GetMapping("/consumer/payment/create")
-    public CommonResult<Payment> create(@RequestBody Payment payment){
+    public CommonResult<Payment> create(Payment payment){
         log.info("********插入的数据：" + payment);
         //postForObject分别有三个参数：请求地址，请求参数，返回的对象类型
         return restTemplate.postForObject(PAYMENT_URL + "/payment/create", payment, CommonResult.class);
