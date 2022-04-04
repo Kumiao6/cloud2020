@@ -7,7 +7,7 @@ spring:
     name: consul-provider-payment
   cloud:
     consul:
-      host: 192.168.3.102  #用linux的ip地址（consul在本机就填localhost）
+      host: localhost  #用linux的ip地址（consul在本机就填localhost）
       port: 8500
       discovery:
         service-name: ${spring.application.name}

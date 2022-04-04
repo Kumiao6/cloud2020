@@ -9,5 +9,5 @@ spring:
     name: cloud-provider-payment
   cloud:
     zookeeper:
-      connect-string: 192.168.3.102:2181 #linux的ip加暴露的端口号
+      connect-string: localhost:2181 #linux的ip加暴露的端口号
 

@@ -79,6 +79,14 @@ public class PaymentController {
         return this.discoveryClient;
     }
 
+
+    //用于测试我们自己写的轮换算法
+    @GetMapping("/payment/lb")
+    public String getPaymentLB(){
+        return serverPort;
+    }
+
+
 }
 
 
