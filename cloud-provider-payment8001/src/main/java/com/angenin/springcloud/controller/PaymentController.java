@@ -6,9 +6,13 @@ import com.angenin.springcloud.server.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.annotation.Resources;
+import java.util.List;
 
 /**
  * @author ：m
@@ -23,6 +27,10 @@ public class PaymentController {
 
     @Value("${server.port}")
     private String serverPort;
+
+    @Resource
+    private DiscoveryClient discoveryClient;	//springframework的DiscoveryClient（不要导错包了）
+
 
     //前后端分离，所以不能直接返回对象，数据要先经过CommonResult封装再返回
     @PostMapping("/payment/create")
@@ -53,6 +61,30 @@ public class PaymentController {
         }
 
     }
+
+
+    @GetMapping("/payment/discovery")
+    public Object discovery(){
+        //获取服务列表的信息
+        List<String> services = discoveryClient.getServices();
+        for (String element : services) {
+            log.info("*******element：" + element);
+        }
+
+        //获取CLOUD-PAYMENT-SERVICE服务的所有具体实例
+        List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
+        for (ServiceInstance instance : instances) {
+            //getServiceId服务器id getHost主机名称 getPort端口号  getUri地址
+            log.info(instance.getServiceId() + "\t" + instance.getHost() + "\t" + instance.getPort() + "\t" + instance.getUri());
+        }
+
+        return this.discoveryClient;
+    }
+
+
+
+
+
 
 }
 
