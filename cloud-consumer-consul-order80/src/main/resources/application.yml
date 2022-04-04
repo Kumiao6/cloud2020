@@ -6,7 +6,7 @@ spring:
     name: consul-consumer-order
   cloud:
     consul:
-      host: localhost  #用linux的ip地址（consul在本机就填localhost）
+      host: 192.168.3.102  #用linux的ip地址（consul在本机就填localhost）
       port: 8500
       discovery:
         service-name: ${spring.application.name}
