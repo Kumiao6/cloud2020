@@ -1,6 +1,7 @@
 package com.angenin.springcloud.lb.Impl;
 
 import com.angenin.springcloud.lb.LoadBalancer;
+import org.apache.catalina.User;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.stereotype.Component;
 
@@ -31,6 +32,7 @@ public class MyLB implements LoadBalancer {
         System.out.println("****第几次访问，次数next：" + next);
 
         return next;
+
     }
 
 
@@ -46,6 +48,5 @@ public class MyLB implements LoadBalancer {
         return serviceInstance.get(index);
     }
 
-
-}
+    }
 

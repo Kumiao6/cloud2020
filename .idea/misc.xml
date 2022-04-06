@@ -10,6 +10,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/cloud-consumer-feign-order80/controller.OrderFeignController/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-consumerzk-order80。/pom.xml" />
       </set>
     </option>
