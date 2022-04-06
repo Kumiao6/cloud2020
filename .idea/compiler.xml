@@ -17,6 +17,7 @@
         <module name="cloud-eureka-server7002" />
         <module name="cloud-consumer-consul-order80" />
         <module name="controller.OrderFeignController" />
+        <module name="cloud-consumer-feign-hystrix-order80" />
         <module name="cloud-consumerzk-order80" />
         <module name="cloud-consumerzk-order80。" />
         <module name="cloud-provider-hystrix-paymeng8001" />
