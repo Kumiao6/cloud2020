@@ -11,9 +11,14 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @date ：Created in 2022/4/6 15:02
  */
 @Component
-@FeignClient(value =  "CLOUD-PAYMENT-SERVICE")  //作为feign的接口，找cloud-payment-service
+@FeignClient(value = "CLOUD-PAYMENT-SERVICE")  //作为feign的接口，找cloud-payment-service
 public interface PaymentFeignService {
     //直接复制8001的方法
     @GetMapping("/payment/get/{id}")
     public CommonResult getPaymentByID(@PathVariable("id") Long id);
+
+    @GetMapping("/payment/feign/timeout")
+    public String paymentFeignTimeout();
+
+
 }
