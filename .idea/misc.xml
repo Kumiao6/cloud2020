@@ -8,12 +8,6 @@
         <option value="$PROJECT_DIR$/cloud-provider-payment8004/pom.xml" />
       </list>
     </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/cloud-consumer-feign-order80/controller.OrderFeignController/pom.xml" />
-        <option value="$PROJECT_DIR$/cloud-consumerzk-order80。/pom.xml" />
-      </set>
-    </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="corretto-1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

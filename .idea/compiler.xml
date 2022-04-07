@@ -19,6 +19,8 @@
         <module name="controller.OrderFeignController" />
         <module name="cloud-consumer-feign-hystrix-order80" />
         <module name="cloud-consumerzk-order80" />
+        <module name="cloud-consumer-hystrix-dashboard9001" />
+        <module name="cloud-gateway-gateway9527" />
         <module name="cloud-consumerzk-order80。" />
         <module name="cloud-provider-hystrix-paymeng8001" />
         <module name="cloud-consumer-order80" />
