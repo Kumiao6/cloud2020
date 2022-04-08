@@ -18,6 +18,7 @@
         <module name="cloud-consumer-consul-order80" />
         <module name="controller.OrderFeignController" />
         <module name="cloud-consumer-feign-hystrix-order80" />
+        <module name="cloud-stream-rabbitmq-provider8801" />
         <module name="cloud-consumerzk-order80" />
         <module name="cloud-consumer-hystrix-dashboard9001" />
         <module name="cloud-config-center-3344" />
@@ -34,6 +35,7 @@
       <module name="cloud-api-commons" target="1.8" />
       <module name="cloud-consumerzk-order80。" target="8" />
       <module name="controller.OrderFeignController" target="8" />
+      <module name="module:cloud-stream-rabbitmq-provider8801" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
