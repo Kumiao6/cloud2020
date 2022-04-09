@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author ：m
  * @date ：Created in 2022/4/2 21:13
  */
-@Service
 public interface PaymentService {
 
     int create(Payment payment);
@@ -18,6 +17,7 @@ public interface PaymentService {
     Payment getPaymentById(@Param("id") Long id);
 
 }
+
 
 
 
