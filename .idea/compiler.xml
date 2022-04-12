@@ -11,7 +11,6 @@
         <module name="cloud-eureka-server7003" />
         <module name="cloud-eureka-server7002" />
         <module name="controller.OrderFeignController" />
-        <module name="seata-order-service2001" />
         <module name="cloudalibaba-consumer-nacos-order84" />
         <module name="cloud-consumer-feign-hystrix-order80" />
         <module name="cloud-stream-rabbitmq-provider8801" />

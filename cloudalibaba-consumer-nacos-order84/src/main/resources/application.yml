@@ -13,9 +13,6 @@ spring:
         dashboard: localhost:8080    #sentinel
         port: 8719
 
-
-
-
 #消费者将去访问的微服务名称
 server-url:
   nacos-user-service: http://nacos-payment-provider

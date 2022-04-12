@@ -24,6 +24,3 @@ spring:
             data-type: json
             rule-type: flow
 
-feign:
-  sentinel:
-    enabled: true #激活Sentinel 对Feign的支持
