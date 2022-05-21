@@ -16,5 +16,6 @@ public class OrderFeignMain80 {
         SpringApplication.run(OrderFeignMain80.class, args);
     }
 
+
 }
 
