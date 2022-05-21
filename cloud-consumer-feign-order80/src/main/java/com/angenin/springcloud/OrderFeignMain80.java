@@ -8,14 +8,13 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @author ：m
  * @date ：Created in 2022/4/6 15:01
  */
-@EnableFeignClients //激活feign
+//激活feign
+@EnableFeignClients
 @SpringBootApplication
 public class OrderFeignMain80 {
 
     public static void main(String[] args) {
         SpringApplication.run(OrderFeignMain80.class, args);
     }
-
-
 }
 
